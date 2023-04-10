@@ -15,7 +15,7 @@ local M = {
     { "<leader>fc", "<cmd>Telescope commands<cr>", desc = "[f]ind [c]ommands" },
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "[f]ind [f]iles" },
     { "<leader>fs", "<cmd>Telescope grep_string<cr>", desc = "[f]ind [s]tring" },
-    { "<leader>gst", "<cmd>Telescope git_status<cr>", desc = "[g]it [st]atus" },
+    { "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "[g]it [s]tatus" },
   },
 
   config = function()
