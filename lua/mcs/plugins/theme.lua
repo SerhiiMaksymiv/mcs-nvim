@@ -8,5 +8,12 @@ if settings.theme == "tokyonight" then
       require("mcs.plugins.themes.tokyonight")
     end,
   }
+else
+  return {
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("mcs.plugins.themes.nightfox")
+    end,
+  }
 end
 
