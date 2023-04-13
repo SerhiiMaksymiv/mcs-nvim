@@ -1,11 +1,18 @@
 local M = {
   "m-demare/hlargs.nvim",
+  dependencies = {
+   'nvim-treesitter/nvim-treesitter'
+  },
 
   config = function()
     --  do something, as of now not sure what exactly, 
     --  but will leave it here to figure out
-    require("hlargs").setup {
+    local hlargs = require('hlargs')
+
+    hlargs.setup {
       color = "#ef9062",
+      paint_arg_declarations = true,
+      paint_arg_usages = true,
       use_colorpalette = true,
       colorpalette = {
         { fg = "#ef9062" },
@@ -25,6 +32,8 @@ local M = {
       },
       excluded_filetypes = {}
     }
+
+    hlargs.enable()
   end
 }
 

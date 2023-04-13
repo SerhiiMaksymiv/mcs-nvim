@@ -23,8 +23,8 @@ local M = {
 
     telescope.setup({
       defaults = {
-	layout_strategy = "vertical",
-	layout_config = {
+        layout_strategy = "vertical",
+        layout_config = {
           width = 0.95,
           height = 0.85,
         }, -- layout config

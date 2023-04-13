@@ -5,6 +5,10 @@ local M = {}
 -- refer to the themes settings file for different styles
 M.theme = "tokyonight"
 
+-- nvim status line plugins
+-- available: lualine, airline
+M.nvim_line = "airline"
+
 -- Toggle global status line
 M.global_statusline = true
 

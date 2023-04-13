@@ -16,3 +16,6 @@ end, { desc = '[/] Fuzzily search in current buffer' })
 
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>h', vim.diagnostic.hide)
+vim.keymap.set('n', '<c-d>', '<c-d>zz', { noremap = true })
+vim.keymap.set('n', '<c-u>', '<c-u>zz', { noremap = true })
+
