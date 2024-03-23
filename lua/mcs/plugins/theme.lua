@@ -1,5 +1,4 @@
 local settings = require("mcs.settings")
-
 if settings.theme == "tokyonight" then
   return {
     "folke/tokyonight.nvim",
