@@ -7,7 +7,7 @@ M.theme = "tokyonight"
 
 -- nvim status line plugins
 -- available: lualine, airline
-M.nvim_line = "airline"
+M.nvim_line = "lualine"
 
 -- Toggle global status line
 M.global_statusline = true
@@ -30,7 +30,7 @@ M.tools = {}
 -- LSPs that should be installed by Mason-lspconfig
 M.lsp_servers = {
   "lua_ls",
-  -- "tsserver",
+  "tsserver",
   "gopls",
 }
 
