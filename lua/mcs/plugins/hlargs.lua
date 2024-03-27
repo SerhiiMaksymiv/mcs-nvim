@@ -1,5 +1,4 @@
 local M = {
---[[
   "m-demare/hlargs.nvim",
   dependencies = {
    'nvim-treesitter/nvim-treesitter'
@@ -36,7 +35,6 @@ local M = {
 
     hlargs.enable()
   end
-]]
 }
 
 return M
