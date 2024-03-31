@@ -21,17 +21,27 @@ local M = {
     { "<leader>b", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", desc = "[g]it [s]tatus", { noremap = true } },
   },
 
+
   config = function()
     local telescope = require("telescope")
 
     telescope.setup({
       defaults = {
         layout_strategy = "vertical",
+
         layout_config = {
           width = 0.95,
           height = 0.85,
         }, -- layout config
+
       }, -- defualts
+
+      pickers = {
+        find_files = {
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+        },
+      },
+
     }) -- telescope setup end
 
     telescope.load_extension 'file_browser'
