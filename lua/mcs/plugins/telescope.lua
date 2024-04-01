@@ -18,7 +18,7 @@ local M = {
     { "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "[g]it [s]tatus" },
     { "<leader>lg", "<cmd>Telescope live_grep<cr>", desc = "[l]ive [g]rep" },
     -- file_browser extension remaps
-    { "<leader>b", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", desc = "[g]it [s]tatus", { noremap = true } },
+    { "<leader>fb", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>", desc = "[f]ile [b]rowser", { noremap = true } },
   },
 
 
