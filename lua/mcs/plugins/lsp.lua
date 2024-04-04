@@ -16,6 +16,12 @@ local M = {
       -- pyright = {},
       -- rust_analyzer = {},
       tsserver = {},
+      cucumber_language_server = {
+        cucumber = {
+          features = { "test/features/**/*.feature" },
+          glue = { "**/steps/**/*.js" }
+        },
+      },
 
       lua_ls = {
         Lua = {
