@@ -1,9 +1,9 @@
 
 local M = {}
 
--- theme: nightfox, tokyonight, tundra, kanagawa, oxocarbon; default is catppuccin
+-- theme: nightfox, tokyonight, catppuccin
 -- refer to the themes settings file for different styles
-M.theme = "nightfox"
+M.theme = "catppuccin"
 
 -- nvim status line plugins
 -- available: lualine, airline

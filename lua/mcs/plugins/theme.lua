@@ -7,11 +7,18 @@ if settings.theme == "tokyonight" then
       require("mcs.plugins.themes.tokyonight")
     end,
   }
-else
+elseif settings.theme == "nightfox" then
   return {
     "EdenEast/nightfox.nvim",
     config = function()
       require("mcs.plugins.themes.nightfox")
+    end,
+  }
+else
+  return {
+    "catppuccin/nvim", as = "catppuccin",
+    config = function()
+      require("mcs.plugins.themes.catppuccin")
     end,
   }
 end
