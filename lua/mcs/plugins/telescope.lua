@@ -12,7 +12,7 @@ local M = {
   },
 
   keys = {
-    { "<leader>fc", "<cmd>Telescope commands<cr>", desc = "[f]ind [c]ommands" },
+    { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "[f]ind [k]eymaps" },
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "[f]ind [f]iles" },
     { "<leader>fs", "<cmd>Telescope grep_string<cr>", desc = "[f]ind [s]tring" },
     { "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "[g]it [s]tatus" },
