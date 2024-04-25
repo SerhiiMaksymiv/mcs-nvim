@@ -41,7 +41,7 @@ local M = {
         find_files = {
           mappings = {
             i = {
-              ["<C-s>"] = "select_horizontal", -- opens found file in horizontal window(?), :sp file. works as <C-ss>
+              ["<C-h>"] = "select_horizontal", -- opens found file in horizontal window(?), :sp file. works as <C-ss>
             },
           },
           find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
