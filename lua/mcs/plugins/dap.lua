@@ -1,6 +1,10 @@
 local M = {
   'mfussenegger/nvim-dap',
 
+  keys = {
+    { "<leader>ds", "<cmd>lua require'dap'.disconnect()<CR><cmd>lua require'dap'.close()<CR>", desc = "[d]ap [c]lose" },
+  },
+
   config = function ()
 
     local dap = require('dap')

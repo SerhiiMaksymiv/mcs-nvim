@@ -18,6 +18,17 @@ return {
         enable = true,
       },
 
+      view = {
+        width = 50,
+      },
+
+      filters = {
+        dotfiles = false,
+        custom = {
+          '^.git$'
+        }
+      },
+
     })
   end,
 }
