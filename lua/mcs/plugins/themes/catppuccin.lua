@@ -1,7 +1,7 @@
 require("catppuccin").setup({
   custom_highlights = function(colors)
         return {
-            Comment = { fg = colors.flamingo },
+            Comment = { fg = colors.surface2 },
             TabLineSel = { bg = colors.pink },
             CmpBorder = { fg = colors.surface2 },
             Pmenu = { bg = colors.none },
