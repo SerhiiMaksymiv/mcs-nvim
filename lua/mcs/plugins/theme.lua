@@ -14,11 +14,19 @@ elseif settings.theme == "nightfox" then
       require("mcs.plugins.themes.nightfox")
     end,
   }
-else
+elseif settings.theme == "cat" then
   return {
     "catppuccin/nvim", as = "catppuccin",
     config = function()
       require("mcs.plugins.themes.catppuccin")
+    end,
+  }
+else
+  return {
+    'marko-cerovac/material.nvim',
+    config = function()
+      require("mcs.plugins.themes.material")
+      require('material.functions').change_style("palenight")
     end,
   }
 end
