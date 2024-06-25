@@ -1,5 +1,5 @@
 local M = {
-  -- 'fatih/vim-go'
+  'fatih/vim-go'
 }
 
 return M
