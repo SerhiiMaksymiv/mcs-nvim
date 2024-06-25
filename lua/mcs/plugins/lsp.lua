@@ -27,6 +27,23 @@ local M = {
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
+      gopls = {
+        semanticTokens = true,
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+        hints = {
+          assignVariableTypes = true,
+          compositeLiteralFields = true,
+          compositeLiteralTypes = true,
+          constantValues = true,
+          functionTypeParameters = true,
+          parameterNames = true,
+          rangeVariableTypes = true,
+        },
+      },
+
       tsserver = {},
       cucumber_language_server = {
         cucumber = {
@@ -46,7 +63,7 @@ local M = {
       },
     }
 
-    local on_attach = function(_, bufnr)
+    local on_attach = function(client, bufnr)
       -- NOTE: Remember that lua is a real programming language, and as such it is possible
       -- to define small helper and utility functions so you don't have to repeat yourself
       -- many times.
@@ -58,6 +75,16 @@ local M = {
           desc = 'LSP: ' .. desc
         end
 	      vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+      end
+
+      if client.name == 'gopls' then
+        client.server_capabilities.semanticTokensProvider = {
+          full = true,
+          legend = {
+            tokenTypes = { 'namespace', 'type', 'class', 'enum', 'interface', 'struct', 'typeParameter', 'parameter', 'variable', 'property', 'enumMember', 'event', 'function', 'method', 'macro', 'keyword', 'modifier', 'comment', 'string', 'number', 'regexp', 'operator', 'decorator' },
+            tokenModifiers = { 'declaration', 'definition', 'readonly', 'static', 'deprecated', 'abstract', 'async', 'modification', 'documentation', 'defaultLibrary'}
+          }
+        }
       end
 
       nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
