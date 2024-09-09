@@ -15,3 +15,5 @@ vim.keymap.set('n', '<leader>h', vim.diagnostic.hide)
 vim.keymap.set('n', '<c-d>', '<c-d>zz', { noremap = true })
 vim.keymap.set('n', '<c-u>', '<c-u>zz', { noremap = true })
 vim.keymap.set('n', '<leader>ee', vim.diagnostic.goto_next, { noremap = true })
+
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
