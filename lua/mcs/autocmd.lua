@@ -43,7 +43,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 local job_id = 0
 local current_command = ""
 
-vim.keymap.set('t', '<space>rt', "<C-\\><C-n><C-w>h<CR>:quit!<CR>", { silent = true })
+vim.keymap.set('t', '<space>rt', "<C-\\><C-n><CR>:quit!<CR>", { silent = true })
 
 vim.keymap.set("n", "<space>tr", function()
   vim.cmd.vnew()
