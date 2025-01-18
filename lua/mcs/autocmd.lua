@@ -44,6 +44,7 @@ local job_id = 0
 local current_command = ""
 
 vim.keymap.set('t', '<space>rt', "<C-\\><C-n><CR>:quit!<CR>", { silent = true })
+vim.keymap.set('t', '<space>rr', "<C-\\><C-n><CR>", { silent = true })
 
 vim.keymap.set("n", "<space>tr", function()
   vim.cmd.vnew()

@@ -21,12 +21,24 @@ elseif settings.theme == "cat" then
       require("mcs.plugins.themes.catppuccin")
     end,
   }
-else
+
+elseif settings.theme == "mat" then
   return {
     'marko-cerovac/material.nvim',
     config = function()
       require("mcs.plugins.themes.material")
       require('material.functions').change_style("palenight")
+    end,
+  }
+
+else
+  return {
+    "nickkadutskyi/jb.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      require("mcs.plugins.themes.jetbrain")
     end,
   }
 end

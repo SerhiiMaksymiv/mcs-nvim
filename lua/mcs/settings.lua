@@ -1,6 +1,6 @@
 local M = {}
 
--- theme: nightfox, tokyonight, catppuccin(cat), material
+-- theme: nightfox, tokyonight, catppuccin(cat), material(mat), jb
 -- refer to the themes settings file for different styles
 M.theme = "tokyonight"
 
