@@ -18,5 +18,6 @@ o.splitright = true -- force all vertical splits to go to the right of current w
 o.tabstop = 2 -- how many columns a tab counts force
 o.termguicolors = true -- set term gui true colors (most terminals support this)
 
+
 -- vim.api.nvim_set_hl(0, "@variable.go", { fg = "#aa00aa" })
 -- vim.api.nvim_set_hl(0, "@type.go", { fg = "#ffffaa" })
