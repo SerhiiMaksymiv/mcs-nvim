@@ -44,7 +44,7 @@ local M = {
         },
       },
 
-      tsserver = {},
+      ts_ls = {},
       cucumber_language_server = {
         cucumber = {
           features = { "test/features/**/*.feature" },
