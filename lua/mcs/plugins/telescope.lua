@@ -44,7 +44,7 @@ local M = {
               ["<C-h>"] = "select_horizontal", -- opens found file in horizontal window(?), :sp file. works as <C-ss>
             },
           },
-          find_command = { "rg", "--files", "--hidden", "--no-ignore-vcs", "--glob", "!**/.git/*" },
+          find_command = { "rg", "--files", "--hidden", "--no-ignore-vcs", "--glob", "!{**/node_modules/*,**/.git/*}" },
         },
       },
 

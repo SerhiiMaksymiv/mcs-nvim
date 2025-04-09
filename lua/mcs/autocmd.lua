@@ -20,6 +20,7 @@ api.nvim_create_autocmd(
   { pattern = "*", command = "set nocursorline", group = cursorGrp }
 )
 
+--[[
 api.nvim_create_autocmd(
   { "BufLeave", "FocusLost" },
   {
@@ -31,6 +32,7 @@ api.nvim_create_autocmd(
     end,
   }
 )
+]]
 
 vim.api.nvim_create_autocmd("TermOpen", {
   group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),

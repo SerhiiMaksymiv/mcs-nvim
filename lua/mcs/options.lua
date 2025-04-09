@@ -17,6 +17,7 @@ o.splitbelow = true -- force all horizontal splits to go below current window
 o.splitright = true -- force all vertical splits to go to the right of current window
 o.tabstop = 2 -- how many columns a tab counts force
 o.termguicolors = true -- set term gui true colors (most terminals support this)
+o.clipboard = "unnamedplus" -- Share clipboard between vim and system
 
 
 -- vim.api.nvim_set_hl(0, "@variable.go", { fg = "#aa00aa" })
