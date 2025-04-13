@@ -1,16 +1,3 @@
--- local install_js_dap = function()
---   local registry = require("mason-registry")
-
---   for _, pkg_name in ipairs { "js-debug-adapter" } do
---     local ok, pkg = pcall(registry.get_package, pkg_name)
---     if ok then
---       if not pkg:is_installed() then
---          pkg:install()
---       end
---     end
---   end
--- end
-
 local M = {
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
