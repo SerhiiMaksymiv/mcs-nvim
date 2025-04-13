@@ -29,7 +29,7 @@ M.tools = {}
 -- LSPs that should be installed by Mason-lspconfig
 M.lsp_servers = {
   "lua_ls",
-  "tsserver",
+  "ts_ls",
   "gopls",
 }
 
