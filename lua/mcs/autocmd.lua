@@ -76,3 +76,4 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 vim.cmd([[ set nofoldenable]])
+vim.cmd 'autocmd CmdlineLeave /,? :set nohlsearch'
