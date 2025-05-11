@@ -15,6 +15,8 @@ require("mcs.options")
 -- Vim autocommands/autogroups
 require("mcs.autocmd")
 
+
+-- Colorscheme for Telescope window
 local colors = {
   text = "#f8f8ff",
   surface0 = "#222221",

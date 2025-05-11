@@ -10,10 +10,8 @@ local M = {
 
   config = function()
     local servers = {
-      -- clangd = {},
       -- gopls = {},
       pyright = {},
-      -- rust_analyzer = {},
       gopls = {
         semanticTokens = true,
         analyses = {

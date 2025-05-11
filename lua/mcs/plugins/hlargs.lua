@@ -30,7 +30,8 @@ local M = {
         { fg = "#EEF06D" },
         { fg = "#8FB272" },
       },
-      excluded_filetypes = {}
+      excluded_filetypes = {},
+      hl_priority = 200
     }
 
     hlargs.enable()

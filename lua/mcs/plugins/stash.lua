@@ -1,8 +1,8 @@
 local M = {
-   "SerhiiMaksymivQAMadness/stash.nvim",
-    opts = {
-      name = "Serhii",
-    }
+  "SerhiiMaksymivQAMadness/stash.nvim",
+  config = function()
+      require("stash").setup()
+  end,
 }
 
 return M

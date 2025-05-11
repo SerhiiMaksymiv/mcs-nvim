@@ -28,6 +28,5 @@ vim.keymap.set("n", "<C-a>", function() harpoon:list():add() end)
 vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 vim.keymap.set("n", "<C-c>", function () harpoon:list():clear() end)
 
--- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<C-h>", "<cmd>bprev<cr>")
-vim.keymap.set("n", "<C-j>", "<cmd>bnext<cr>")
+-- Toggle previous & next buffers
+vim.keymap.set("n", "<C-j>", "<cmd>b#<cr>")
