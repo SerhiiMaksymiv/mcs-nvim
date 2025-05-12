@@ -30,3 +30,8 @@ vim.keymap.set("n", "<C-c>", function () harpoon:list():clear() end)
 
 -- Toggle previous & next buffers
 vim.keymap.set("n", "<C-j>", "<cmd>b#<cr>")
+
+-- Toggle previous & next buffers
+local stash = require("stash")
+stash:setup()
+vim.keymap.set("n", "<leader>b", function () stash.back() end)
