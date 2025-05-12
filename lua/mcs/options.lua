@@ -19,6 +19,13 @@ o.tabstop = 2 -- how many columns a tab counts force
 o.termguicolors = true -- set term gui true colors (most terminals support this)
 o.clipboard = "unnamedplus" -- Share clipboard between vim and system
 
+o.fillchars = { fold = " " }
+o.foldmethod = "indent"
+o.foldenable = false
+o.foldlevel = 99
+vim.g.markdown_folding = 1
+-- vim.g.markdown_folding = 1 -- enable markdown folding
+
 
 -- vim.api.nvim_set_hl(0, "@variable.go", { fg = "#aa00aa" })
 -- vim.api.nvim_set_hl(0, "@type.go", { fg = "#ffffaa" })

@@ -62,6 +62,13 @@ local M = {
         },
       },
 
+      routes = {
+      {
+        view = "mini",
+        filter = { event = "msg_showmode" },
+      },
+    },
+
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {

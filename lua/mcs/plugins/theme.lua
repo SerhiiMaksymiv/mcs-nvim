@@ -31,6 +31,14 @@ elseif settings.theme == "mat" then
     end,
   }
 
+elseif settings.theme == "dracula" then
+  return {
+    "Mofiqul/dracula.nvim",
+    config = function()
+      require("mcs.plugins.themes.dracula")
+    end,
+  }
+
 else
   return {
     "nickkadutskyi/jb.nvim",
