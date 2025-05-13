@@ -23,15 +23,14 @@ local harpoon = require("harpoon")
 
 -- REQUIRED
 harpoon:setup()
-
 vim.keymap.set("n", "<C-a>", function() harpoon:list():add() end)
 vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 vim.keymap.set("n", "<C-c>", function () harpoon:list():clear() end)
 
 -- Toggle previous & next buffers
-vim.keymap.set("n", "<C-j>", "<cmd>b#<cr>")
-
--- Toggle previous & next buffers
 local stash = require("stash")
 stash:setup()
 vim.keymap.set("n", "<leader>b", function () stash.back() end)
+
+local ls = require("luasnip")
+vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
