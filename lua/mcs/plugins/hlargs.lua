@@ -33,7 +33,7 @@ local M = {
 
       extras = {
         named_parameters = false,
-        unused_args = true,
+        unused_args = true, -- <- causes error
       },
 
       excluded_filetypes = {},
