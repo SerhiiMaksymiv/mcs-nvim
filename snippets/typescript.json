@@ -15,7 +15,7 @@
         "body": [
           "await test.step(`${1:description}`, async () => {",
           "\tawait ${2:step}",
-          "\t})"
+          "})"
         ],
         "description": "Test Step"
     },
@@ -25,7 +25,7 @@
         "body": [
           "await ${1:name}.step(`${2:description}`, async () => {",
           "\tawait ${3:step}",
-          "\t})"
+          "})"
         ],
         "description": "Named Test Step"
     },

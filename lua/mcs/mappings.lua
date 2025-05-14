@@ -31,6 +31,7 @@ vim.keymap.set("n", "<C-c>", function () harpoon:list():clear() end)
 local stash = require("stash")
 stash:setup()
 vim.keymap.set("n", "<leader>b", function () stash.back() end)
+vim.keymap.set("n", "<leader>,", function () stash.forward() end)
 
 local ls = require("luasnip")
 vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})

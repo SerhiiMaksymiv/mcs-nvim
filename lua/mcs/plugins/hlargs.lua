@@ -30,6 +30,12 @@ local M = {
         { fg = "#EEF06D" },
         { fg = "#8FB272" },
       },
+      extras = {
+        named_parameters = false,
+        unused_args = {
+          fg = "#cccccc",
+        }
+      },
       excluded_filetypes = {},
       hl_priority = 200
     }
