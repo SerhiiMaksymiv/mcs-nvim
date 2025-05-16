@@ -45,10 +45,10 @@ local M = {
         cmdline_popup = {
           border = {
             style = "none",
-            padding = { 2, 6 },
+            padding = { 1, 4 },
           },
           position = {
-            row = 50,
+            row = 60,
             col = "50%",
           },
           size = {
