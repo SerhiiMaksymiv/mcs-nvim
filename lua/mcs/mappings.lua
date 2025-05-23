@@ -18,20 +18,20 @@ vim.keymap.set('n', '<leader>ee', vim.diagnostic.goto_next, { noremap = true })
 
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
-
-local harpoon = require("harpoon")
-
--- REQUIRED
-harpoon:setup()
-
-vim.keymap.set("n", "<C-a>", function() harpoon:list():add() end)
-vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-vim.keymap.set("n", "<C-c>", function () harpoon:list():clear() end)
-
--- Toggle previous & next buffers
-vim.keymap.set("n", "<C-j>", "<cmd>b#<cr>")
-
 -- Toggle previous & next buffers
 local stash = require("stash")
-stash:setup()
-vim.keymap.set("n", "<leader>b", function () stash.back() end)
+stash.setup()
+vim.keymap.set('n', "<leader>,", function() stash.back() end, { silent = true })
+vim.keymap.set('n', "<leader>j", '<cmd>bnext<cr>', { silent = true })
+
+local ls = require("luasnip")
+---@diagnostic disable-next-line
+vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
+
+vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
+vim.keymap.set({"i", "s"}, "<C-T", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end, {silent = true})

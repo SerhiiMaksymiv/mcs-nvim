@@ -31,7 +31,7 @@ local M = {
         layout_strategy = "vertical",
 
         layout_config = {
-          width = 0.95,
+          width = 0.75,
           height = 0.85,
         }, -- layout config
 

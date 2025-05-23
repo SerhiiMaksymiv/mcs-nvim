@@ -1,16 +1,12 @@
 local M = {
-  -- NOTE: This is where your plugins related to LSP can be installed.
-  --  The configuration is done below. Search for lspconfig to find it below.
   'neovim/nvim-lspconfig',
   dependencies = {
-    -- Automatically install LSPs to stdpath for neovim
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
   },
 
   config = function()
     local servers = {
-      -- gopls = {},
       pyright = {},
       gopls = {
         semanticTokens = true,
@@ -49,12 +45,6 @@ local M = {
     }
 
     local on_attach = function(client, bufnr)
-      -- NOTE: Remember that lua is a real programming language, and as such it is possible
-      -- to define small helper and utility functions so you don't have to repeat yourself
-      -- many times.
-      --
-      -- In this case, we create a function that lets us more easily define mappings specific
-      -- for LSP related items. It sets the mode, buffer and description for us each time.
       local nmap = function(keys, func, desc)
         if desc then
           desc = 'LSP: ' .. desc
@@ -99,11 +89,10 @@ local M = {
         vim.lsp.buf.format()
       end, { desc = 'Format current buffer with LSP' })
 
-    end -- on on_attach end
+    end
 
-    -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+    capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
 
     -- Setup mason so it can manage external tooling
     require('mason').setup()
@@ -112,6 +101,7 @@ local M = {
     local mason_lspconfig = require 'mason-lspconfig'
 
     mason_lspconfig.setup {
+      automatic_installation = false,
       ensure_installed = vim.tbl_keys(servers),
     }
 

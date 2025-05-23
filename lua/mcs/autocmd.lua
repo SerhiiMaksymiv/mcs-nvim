@@ -32,4 +32,11 @@ api.nvim_create_autocmd(
   }
 )
 
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+    vim.cmd('NvimTreeOpen')
+    vim.cmd('wincmd l')
+	end,
+})
+
 vim.cmd 'autocmd CmdlineLeave /,? :set nohlsearch'
