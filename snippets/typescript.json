@@ -3,9 +3,9 @@
     "test": {
         "prefix": "tt",
         "body": [
-          "test(`${1:description}`, async ({ home }) => (",
-            "",
-            "\t)"
+          "test(`${1:description}`, async ({ home }) => {",
+          "",
+          "})"
         ],
         "description": "Test"
     },
@@ -36,5 +36,44 @@
           "await expect(${1:expected}).to${2}"
         ],
         "description": "Test Step Expect"
+    },
+
+    "create asset": {
+      "prefix": "ca",
+      "body": [
+        "const uid = shortid()",
+        "const assetName = `QAAuto Asset \\${uid}`",
+        "const assetTypeName = '!QAAuto Base Asset_Type Digital'",
+        "",
+        "const assetId = await test.step(`Create \\${assetName} Asset`, async () => {",
+        "\treturn api.createAsset({ assetName, assetTypeName })",
+        "})",
+        "",
+        "await test.step(`Open asset \\${assetName} in template editor`, async () => {",
+        "\tawait home.go(`\\${config.baseUrl}/admin/template/\\${assetId}`)",
+        "})",
+        ""
+      ],
+      "description": "Create Digital Asset"
+    },
+
+    "start test file": {
+      "prefix": "st",
+      "body": [
+        "import { config } from 'config'",
+        "import { test } from '@lib/fixture'",
+        "",
+        "test.describe('Describe', () => {",
+        "",
+        "\ttest.beforeEach(async ({ login }) => { login })",
+        "",
+        "\ttest('Test', async ({ home }) => {",
+        "",
+        "\t})",
+        "",
+        "})"
+      ],
+      "description": "Start Test File"
     }
+
 }
