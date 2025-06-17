@@ -24,8 +24,3 @@ o.foldmethod = "indent"
 o.foldenable = false
 o.foldlevel = 99
 vim.g.markdown_folding = 1
--- vim.g.markdown_folding = 1 -- enable markdown folding
-
-
--- vim.api.nvim_set_hl(0, "@variable.go", { fg = "#aa00aa" })
--- vim.api.nvim_set_hl(0, "@type.go", { fg = "#ffffaa" })
