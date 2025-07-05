@@ -1,6 +1,6 @@
 local M = {
   "SerhiiMaksymiv/stash.nvim",
-  -- branch = "develop",
+  -- { dir = "~/repos/stash.nvim" },
 }
 
 return M
