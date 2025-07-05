@@ -21,6 +21,7 @@ o.clipboard = "unnamedplus" -- Share clipboard between vim and system
 
 o.fillchars = { fold = " " }
 o.foldmethod = "indent"
+o.smartindent = false
 o.foldenable = false
 o.foldlevel = 99
 vim.g.markdown_folding = 1
