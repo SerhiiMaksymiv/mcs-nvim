@@ -22,7 +22,7 @@ vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 local stash = require("stash")
 stash.setup()
 vim.keymap.set('n', "<leader>,", function() stash.back() end, { silent = true })
-vim.keymap.set('n', "<leader>j", '<cmd>bnext<cr>', { silent = true })
+vim.keymap.set('n', "<leader>j", function () stash.forward() end, { silent = true })
 
 local ls = require("luasnip")
 ---@diagnostic disable-next-line
