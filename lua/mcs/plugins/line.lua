@@ -33,7 +33,11 @@ return {
           lualine_z = {'location'}
         },
         inactive_sections = {
-          lualine_c = { 'filename', path = 2 },
+          lualine_c = {
+            {
+              'filename', path = 2
+            },
+          }
         }
       }
 
