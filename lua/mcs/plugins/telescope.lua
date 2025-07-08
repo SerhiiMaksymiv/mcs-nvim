@@ -25,6 +25,13 @@ local M = {
 
   config = function()
     local telescope = require("telescope")
+    local excludes = "!{**/node_modules/*," ..
+      "**/.git/*," ..
+      "**/allure-results/*," ..
+      "**/allure-report/*," ..
+      "**/audit-results/*," ..
+      "**/test-results/*," ..
+      "}"
 
     telescope.setup({
       defaults = {
@@ -47,7 +54,7 @@ local M = {
               ["<C-h>"] = "select_horizontal", -- opens found file in horizontal window(?), :sp file. works as <C-ss>
             },
           },
-          find_command = { "rg", "--files", "--hidden", "--no-ignore-vcs", "--glob", "!{**/node_modules/*,**/.git/*,**/allure-results/*,**/allure-report/*,**/audit/*}" },
+          find_command = { "rg", "--files", "--hidden", "--no-ignore-vcs", "--glob", excludes },
         },
       },
 
