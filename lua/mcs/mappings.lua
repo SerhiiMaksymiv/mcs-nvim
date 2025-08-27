@@ -35,3 +35,10 @@ vim.keymap.set({"i", "s"}, "<C-T", function()
 		ls.change_choice(1)
 	end
 end, {silent = true})
+
+-- ∆˚ => Option + j/k
+map("n", "∆", ":m .+1<CR>==") -- move line up(n)
+map("n", "˚", ":m .-2<CR>==") -- move line down(n)
+
+map("v", "∆", ":m '>+1<CR>gv=gv") -- move line up(v)
+map("v", "˚", ":m '<-2<CR>gv=gv") -- move line down(v)

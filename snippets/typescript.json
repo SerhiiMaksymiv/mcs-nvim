@@ -3,7 +3,7 @@
     "test": {
         "prefix": "tt",
         "body": [
-          "test(`${1:description}`, async ({ home }) => {",
+          "test(`${1:description}`, async ({}) => {",
           "",
           "})"
         ],
