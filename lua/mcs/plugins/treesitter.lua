@@ -19,10 +19,8 @@ local M = {
       incremental_selection = {
         enable = true,
         keymaps = {
-          -- init_selection = '<leader>ss',
           node_incremental = 'v',
           node_decremental = 'V',
-          -- scope_incremental = '<leaded>sc',
         },
       },
 
