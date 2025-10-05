@@ -2,7 +2,7 @@ local M = {
   'lewis6991/gitsigns.nvim',
 
   config = function()
-    require('gitsigns').setup {
+    require('gitsigns').setup({
 
       -- See `:help gitsigns.txt`
       signs = {
@@ -100,7 +100,7 @@ local M = {
         -- Text object
         map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
       end
-    }
+    })
   end
 }
 
