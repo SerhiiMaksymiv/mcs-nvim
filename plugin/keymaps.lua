@@ -24,6 +24,7 @@ local stash = require("stash")
 stash.setup()
 vim.keymap.set('n', "<leader>,", function() stash.back() end, { silent = true })
 vim.keymap.set('n', "<leader>j", function () stash.forward() end, { silent = true })
+vim.keymap.set('n', "<leader>h", function () stash.print() end, { silent = true })
 
 local ls = require("luasnip")
 ---@diagnostic disable-next-line
