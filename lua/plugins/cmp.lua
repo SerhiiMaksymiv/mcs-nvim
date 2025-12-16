@@ -6,21 +6,21 @@ local M = {
     snippets = { preset = 'luasnip' },
     keymap = {
       preset = 'enter',
-    --   ['<Tab>'] = {
-    --     function(cmp)
-    --       if cmp.snippet_active() then
-    --         return cmp.accept()
-    --       else
-    --         return cmp.select_and_accept()
-    --       end
-    --     end,
-    --     -- 'snippet_forward',
-    --     'fallback',
-    --   },
-    --   ['<S-Tab>'] = {
-    --     -- 'snippet_backward',
-    --     'fallback',
-    --   },
+      ['<Tab>'] = {
+        function(cmp)
+          if cmp.snippet_active() then
+            return cmp.accept()
+          else
+            return cmp.select_and_accept()
+          end
+        end,
+        -- 'snippet_forward',
+        'fallback',
+      },
+      ['<S-Tab>'] = {
+        -- 'snippet_backward',
+        'fallback',
+      },
     },
 
     appearance = {
@@ -41,7 +41,12 @@ local M = {
       },
 
       documentation = {
-        auto_show = true
+        auto_show = true,
+        auto_show_delay_ms = 100,
+        window = {
+          border = "rounded",
+          winhighlight = "Normal:Normal,FloatBorder:@comment.todo,CursorLine:CursorLine,Search:None",
+        },
       }
     },
 
