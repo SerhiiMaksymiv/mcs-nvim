@@ -13,7 +13,7 @@
       "prefix": "tts",
       "body": [
         "await test.step(`${1:description}`, async () => {",
-        "\tawait ${2:step}",
+        "",
         "})"
       ],
       "description": "Test Step"
@@ -47,9 +47,7 @@
       "\tawait api.createAsset({",
       "\t\t...Mutables.DEFAULT_ASSET.TEMPLATE.ACTIVE_PRINT_TEMPLATE,",
       "\t\t\"name\": assetName,",
-      "\t\t\"assetType\": {",
-      "\t\t\"id\": Constants.ASSET_TYPES.PRINT_TEMPLATE.id",
-      "\t\t}",
+      "\t\t\"assetType\": { \"id\": Constants.ASSET_TYPES.PRINT_TEMPLATE.id }",
       "\t})",
       "})"
     ],
@@ -66,13 +64,11 @@
       "\tconst _asset = await api.createAsset({",
       "\t\t...Mutables.DEFAULT_ASSET.TEMPLATE.ACTIVE_PRINT_TEMPLATE,",
       "\t\t\"name\": assetName,",
-      "\t\t\"assetType\": {",
-      "\t\t\"id\": Constants.ASSET_TYPES.PRINT_TEMPLATE.id",
-      "\t\t}",
+      "\t\t\"assetType\": { \"id\": Constants.ASSET_TYPES.PRINT_TEMPLATE.id }",
       "\t})",
       "",
       "\tif (!_asset) throw new Error('Failed to create asset')",
-      "\tawait api.updatePrintTemplate(_asset, printTemplateWithTextElement())",
+      "\tawait api.updatePrintTemplate(_asset, definitions.defaultPrintTemplate)",
       "})"
     ],
     "description": "Create Asset"
