@@ -1,24 +1,25 @@
-local settings = require("mcs.settings")
+--[[
+local settings = require("plugin.settings")
 if settings.theme == "tokyonight" then
   return {
     "folke/tokyonight.nvim",
     branch = "main",
     config = function()
-      require("mcs.plugins.themes.tokyonight")
+      require("plugins.themes.tokyonight")
     end,
   }
 elseif settings.theme == "nightfox" then
   return {
     "EdenEast/nightfox.nvim",
     config = function()
-      require("mcs.plugins.themes.nightfox")
+      require("plugins.themes.nightfox")
     end,
   }
 elseif settings.theme == "cat" then
   return {
     "catppuccin/nvim", as = "catppuccin",
     config = function()
-      require("mcs.plugins.themes.catppuccin")
+      require("plugins.themes.catppuccin")
     end,
   }
 
@@ -26,7 +27,7 @@ elseif settings.theme == "mat" then
   return {
     'marko-cerovac/material.nvim',
     config = function()
-      require("mcs.plugins.themes.material")
+      require("plugins.themes.material")
       require('material.functions').change_style("palenight")
     end,
   }
@@ -35,7 +36,7 @@ elseif settings.theme == "dracula" then
   return {
     "Mofiqul/dracula.nvim",
     config = function()
-      require("mcs.plugins.themes.dracula")
+      require("plugins.themes.dracula")
     end,
   }
 
@@ -46,8 +47,16 @@ else
     priority = 1000,
     opts = {},
     config = function()
-      require("mcs.plugins.themes.jetbrain")
+      require("plugins.themes.jetbrain")
     end,
   }
 end
+]]
 
+
+  return {
+    "Mofiqul/dracula.nvim",
+    config = function()
+      require("plugins.themes.dracula")
+    end,
+  }
