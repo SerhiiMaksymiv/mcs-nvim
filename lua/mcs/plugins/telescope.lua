@@ -31,6 +31,7 @@ local M = {
       "**/allure-report/*," ..
       "**/audit-results/*," ..
       "**/test-results/*," ..
+      "**/dist/*," ..
       "}"
 
     telescope.setup({
