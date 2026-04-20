@@ -34,10 +34,10 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 vim.g.mapleader = " "
 
 require("lazy").setup("plugins", {
-    change_detection = {
-        enabled = false,
-        notify = true,
-    },
+  change_detection = {
+    enabled = false,
+    notify = true,
+  },
 })
 
 -- Colorscheme for Telescope window
