@@ -20,18 +20,23 @@ api.nvim_create_autocmd(
   { pattern = "*", command = "set nocursorline", group = cursorGrp }
 )
 
-api.nvim_create_autocmd(
-  { "BufLeave", "FocusLost" },
-  {
-    pattern = "*",
-    callback = function()
-      if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
-        vim.api.nvim_command('silent update')
-      end
-    end,
-  }
-)
+-- --------------------------------------------------------------------
+-- Auto Save on Focus Lost or Buffer Leave
+-- --------------------------------------------------------------------
+-- Automatically saves changes when you leave a buffer or Neovim loses focus.
+-- Only triggers for normal file buffers (not terminals or help).
+vim.api.nvim_create_autocmd({ "FocusLost", "BufLeave", "BufWinLeave", "InsertLeave" }, {
+  callback = function()
+    if vim.bo.filetype ~= "" and vim.bo.buftype == "" and vim.bo.modified then
+      vim.cmd("silent! w")
+    end
+  end,
+  desc = "Auto-save modified buffers on focus or mode change",
+})
 
+-- --------------------------------------------------------------------
+-- Open NvimTree on startup
+-- --------------------------------------------------------------------
 -- vim.api.nvim_create_autocmd("VimEnter", {
 -- 	callback = function()
 --     vim.cmd('NvimTreeOpen')
