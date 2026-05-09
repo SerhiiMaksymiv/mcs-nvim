@@ -32,11 +32,26 @@ api.nvim_create_autocmd(
   }
 )
 
--- vim.api.nvim_create_autocmd("VimEnter", {
--- 	callback = function()
---     vim.cmd('NvimTreeOpen')
---     vim.cmd('wincmd l')
--- 	end,
+-- local function pipeToClipboard()
+--   local output=''
+--   local delim=''
+--   for i,v in ipairs(vim.v.event.regcontents) do
+--     output = output .. delim .. v
+--     delim = '\n'
+--   end
+--   if (vim.v.event.regname == '+' or vim.v.event.regname == '*') then
+--
+--     copyCmd = io.popen('rclip -loose', 'w')
+--     copyCmd:write(output)
+--     copyCmd:flush()
+--     copyCmd:close()
+--   end
+-- end
+--
+-- vim.api.nvim_create_autocmd("TextYankPost", {
+--   callback = function()
+--     pipeToClipboard()
+--   end,
 -- })
 
 vim.cmd 'autocmd CmdlineLeave /,? :set nohlsearch'

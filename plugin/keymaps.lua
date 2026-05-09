@@ -44,3 +44,11 @@ map("n", "˚", ":m .-2<CR>==") -- move line down(n)
 
 map("v", "∆", ":m '>+1<CR>gv=gv") -- move line up(v)
 map("v", "˚", ":m '<-2<CR>gv=gv") -- move line down(v)
+
+vim.keymap.set("v", "<leader>y", function()
+  local yankfile = "$HOME/downloads/yankfile.txt"
+  vim.cmd('noau normal! "vy')
+  local text = vim.fn.getreg('"', 1)
+  vim.cmd("!echo ".. vim.inspect(text) .. " > " .. yankfile)
+  vim.cmd("!scp " .. yankfile .. " mac:/Users/mcs/.config/yankssh/")
+end)
