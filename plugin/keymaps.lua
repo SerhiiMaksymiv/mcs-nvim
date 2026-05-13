@@ -49,3 +49,5 @@ vim.keymap.set("n","<leader>p", function()
   vim.cmd("!cat $HOME/.config/yankssh/yankfile.txt | pbcopy")
   vim.cmd('normal! P')
 end)
+
+vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })

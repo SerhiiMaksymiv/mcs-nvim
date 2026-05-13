@@ -19,6 +19,16 @@
       "description": "Test Step"
   },
 
+  "retry test step": {
+      "prefix": "ttr",
+      "body": [
+        "await retryStep(`${1:description}`, async () => {",
+        "\t",
+        "})"
+      ],
+      "description": "Retry Test Step"
+  },
+
   "named test step": {
       "prefix": "ttc",
       "body": [
