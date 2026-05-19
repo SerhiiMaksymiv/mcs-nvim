@@ -1,58 +1,32 @@
---[[
-local settings = require("plugin.settings")
-if settings.theme == "tokyonight" then
-  return {
-    "folke/tokyonight.nvim",
-    branch = "main",
-    config = function()
-      require("plugins.themes.tokyonight")
-    end,
-  }
-elseif settings.theme == "nightfox" then
-  return {
-    "EdenEast/nightfox.nvim",
-    config = function()
-      require("plugins.themes.nightfox")
-    end,
-  }
-elseif settings.theme == "cat" then
-  return {
-    "catppuccin/nvim", as = "catppuccin",
-    config = function()
-      require("plugins.themes.catppuccin")
-    end,
-  }
+  -- return {
+  --   "folke/tokyonight.nvim",
+  --   branch = "main",
+  --   config = function()
+  --     require("plugins.themes.tokyonight")
+  --   end,
+  -- }
 
-elseif settings.theme == "mat" then
-  return {
-    'marko-cerovac/material.nvim',
-    config = function()
-      require("plugins.themes.material")
-      require('material.functions').change_style("palenight")
-    end,
-  }
+  -- return {
+  --   "EdenEast/nightfox.nvim",
+  --   config = function()
+  --     require("plugins.themes.nightfox")
+  --   end,
+  -- }
 
-elseif settings.theme == "dracula" then
-  return {
-    "Mofiqul/dracula.nvim",
-    config = function()
-      require("plugins.themes.dracula")
-    end,
-  }
+  -- return {
+  --   "catppuccin/nvim", as = "catppuccin",
+  --   config = function()
+  --     require("plugins.themes.catppuccin")
+  --   end,
+  -- }
 
-else
-  return {
-    "nickkadutskyi/jb.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-      require("plugins.themes.jetbrain")
-    end,
-  }
-end
-]]
-
+  -- return {
+  --   'marko-cerovac/material.nvim',
+  --   config = function()
+  --     require("plugins.themes.material")
+  --     require('material.functions').change_style("palenight")
+  --   end,
+  -- }
 
   return {
     "Mofiqul/dracula.nvim",
@@ -60,3 +34,4 @@ end
       require("plugins.themes.dracula")
     end,
   }
+

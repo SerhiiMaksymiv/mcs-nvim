@@ -8,12 +8,13 @@
 -- require("mcs.packer")
 -- "Global" Keymappings
 -- require("mcs.mappings")
+-- require("mcs.settins")
 
 -- All non plugin related (vim) options
--- require("mcs.options")
+--require("mcs.options")
 
 -- Vim autocommands/autogroups
--- require("mcs.autocmd")
+--require("mcs.autocmd")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then

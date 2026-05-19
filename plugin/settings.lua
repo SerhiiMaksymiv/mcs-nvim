@@ -2,7 +2,7 @@ local M = {}
 
 -- theme: nightfox, tokyonight, catppuccin(cat), material(mat), jb, dracula
 -- refer to the themes settings file for different styles
-M.theme = "dracula"
+M.theme = "cat"
 
 -- nvim status line plugins
 -- available: lualine, airline
