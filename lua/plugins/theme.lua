@@ -29,9 +29,16 @@
   -- }
 
   return {
-    "Mofiqul/dracula.nvim",
+    'rebelot/kanagawa.nvim',
     config = function()
-      require("plugins.themes.dracula")
+      require("plugins.themes.kanagawa")
     end,
   }
+
+  -- return {
+  --   "Mofiqul/dracula.nvim",
+  --   config = function()
+  --     require("plugins.themes.dracula")
+  --   end,
+  -- }
 
