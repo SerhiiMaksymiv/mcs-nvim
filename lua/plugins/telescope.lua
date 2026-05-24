@@ -1,6 +1,7 @@
 local M = {
-  "nvim-telescope/telescope.nvim",
 
+  "nvim-telescope/telescope.nvim",
+  version = '*',
   cmd = "Telescope",
 
   dependencies = {

@@ -5,7 +5,7 @@ map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
 map('n', '<leader>x', vim.cmd.Ex)
-map('n', '<leader>cfp', ':let @+=expand("%")<CR>')
+map('n', '<leader>cp', ':let @+=expand("%")<CR>')
 
 vim.keymap.set('n', '<leader>/', function()
   require('telescope.builtin').current_buffer_fuzzy_find()
@@ -25,6 +25,8 @@ stash.setup()
 vim.keymap.set('n', "<leader>,", function() stash.back() end, { silent = true })
 vim.keymap.set('n', "<leader>j", function () stash.forward() end, { silent = true })
 vim.keymap.set('n', "<leader>k", function () stash.print() end, { silent = true })
+vim.keymap.set('n', "<leader>K", function () stash.show() end, { silent = true })
+vim.keymap.set('n', "<leader>L", function () stash.close() end, { silent = true })
 
 local ls = require("luasnip")
 ---@diagnostic disable-next-line
